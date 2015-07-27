@@ -16,7 +16,13 @@ Lastly, it's recommend that you set up [SSH-keys for GitHub](https://help.github
 _If you're using Windows, rest assured that **you are supported**! Just be sure to check out the [documentation](https://github.com/ezekg/theme-juice-cli#is-windows-supported), because you might need to do a couple extra things to make sure it plays nicely with your operating system._
 
 ## Installation
-It's as simple as running `gem install theme-juice` in your terminal. Depending on how your Ruby environment is set up, you may have to run that with `sudo`.
+It's as simple as running the command below inside of your terminal:
+
+```
+gem install theme-juice
+```
+
+_Depending on how your Ruby environment is set up, you may have to run that with `sudo`._
 
 ## Introduction
 There has a been a great amount of work put into VVV by the community, but if there's one thing that isn't that great, it would be the process of creating a new project. After a few weeks of using VVV, I found myself doing the same steps over and over and over and over again:
