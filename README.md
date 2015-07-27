@@ -48,9 +48,10 @@ What that means is that `tj` doesn't provide you with options for selecting your
 _One thing worth noting: when I talk about a "starter theme", I'm not referring to something like [Underscores](http://underscores.me/); rather, I'm talking about an entire WordPress-installation-starter, like [WP-Skeleton](https://github.com/markjaquith/WordPress-Skeleton), [Bedrock](https://github.com/roots/bedrock) or [our starter theme](https://github.com/ezekg/theme-juice-starter). So, if you're looking to use a custom starter theme, make sure it's a full WordPress installation, and not simply a theme._
 
 ## Creating your first project
-![Creating your first project](images/create.jpg)
 
 Now that we've discussed the steps that need automation, let's see how we take advantage of what `tj` has to offer. To get started, we simply have to run the following command: `tj create`. There's [a ton of flags available to this command](http://themejuice.it/create#GLOBAL-OPTIONS), but we won't get into them today.
+
+![Creating your first project](images/create.jpg)
 
 This will lead us through a series of prompts to set up our project, including name and path for the project (remember, the path can be anywhere on your system!), the starter theme you would like to use, the database information, etc. Using all of that information, `tj` will create the necessary files needed to get you up and running as quickly as possible. At the end of all the series of prompts, you will be asked to confirm:
 
