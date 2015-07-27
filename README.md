@@ -58,6 +58,8 @@ This will lead us through a series of prompts to set up our project, including n
 
 On your first `create`, it'll go ahead and install VVV into the `~/vagrant` directory (unless another path is specified via [global flags](http://themejuice.it/#GLOBAL-OPTIONS), or VVV is already installed) and then provision it, which might take a few minutes if you've never done it before.
 
+![Creating your first project](images/success.jpg)
+
 After that's all finished up, `tj` will do its thing and in a few minutes (basically, the time it takes to provision the VM with the new changes), you'll have a brand new development project to work with. Did I mention that you can [automatically access this new project from any device on your network](https://github.com/ezekg/theme-juice-cli#can-i-access-a-project-from-another-device-ie-mobile)?
 
 ## Setting up an existing project
@@ -73,33 +75,21 @@ The `Juicefile` is a YAML configuration file that can be used to store commonly-
 
 ```yml
 commands:
-
-  # Run application install scripts
-  install:
+  install:                         # Run application install scripts
     - composer install
     - bundle install
     - npm install
     - bower install
     - grunt build
-
-  # Manage build tools
-  watch:
+  watch:                           # Manage build tools
     - grunt %args%
-
-  # Manage front-end dependencies
-  assets:
+  assets:                          # Manage front-end dependencies
     - bower %args%
-
-  # Manage back-end dependencies
-  vendor:
+  vendor:                          # Manage back-end dependencies
     - composer %args%
-
-  # Manage WP installation
-  wp:
+  wp:                              # Manage WP installation
     - wp ssh --host=vagrant %args%
-
-  # Create a backup of the current database with a nice timestamp
-  backup:
+  backup:                          # Create a backup of the local database
     - mkdir -p backup
     - wp ssh --host=vagrant db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
 ```
@@ -115,18 +105,18 @@ There's not a lot of things that I dislike more than FTP deployments. By utilizi
 
 ```yml
 stages:
-  production:
-    server: 192.168.50.4
-    path: /var/www/production
-    user: deploy
-    url: example.com
-    uploads: app/uploads
-    tmp: tmp
-    shared:
+  production:                      # Stage name
+    server: 192.168.50.4           # Server IP or domain
+    path: /var/www/production      # Path to the web root
+    user: deploy                   # User to deploy as
+    url: example.com               # URL for stage
+    uploads: app/uploads           # Path to uploads directory from project root
+    tmp: tmp                       # Path to temp directory
+    shared:                        # Files to share between deployments
       - .env.production
-    ignore:
+    ignore:                        # Files to ignore on deployments
       - robots.txt
-    roles:
+    roles:                         # Stage roles (for Capistrano)
       - :web
       - :app
       - :db
