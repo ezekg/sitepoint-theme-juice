@@ -1,6 +1,6 @@
 # Getting Started With Theme Juice For Local WordPress Development
 
-Like most WordPress developers, I used MAMP for local development environments. MAMP works well for some people, but it doesn't really allow you to create reproducible development environments. Your environment is really at the will of both MAMP itself (i.e. your settings), as well as which operating system your developing on; and that's really not a good thing.
+Like most WordPress developers, I used MAMP for local development environments. MAMP works well for some people, but it doesn't really allow you to create reproducible development environments. Your environment is really at the will of both MAMP itself (i.e. your settings), as well as which operating system you're developing on; and that's really not a good thing.
 
 After awhile, the MAMP workflow isn't all that it's cracked up to be, especially once you begin needing to share environments between team members. Suffice it to say, we left the MAMP workflow behind once we were introduced to the ubiquitous [Vagrant](https://vagrantup.com/). I won't get into the details of that affair, [because there's already a great article written on that happening to somebody else](http://www.sitepoint.com/wordpress-meets-vagrant-vvv/). How do you ease yourself into Vagrant, when you're so used to your beloved MAMP workflow?
 
