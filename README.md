@@ -55,7 +55,13 @@ _One thing worth noting: when I talk about a "starter theme", I'm not referring 
 
 ## Creating your first project
 
-Now that we've discussed the steps that need automation, let's see how we take advantage of what `tj` has to offer. To get started, we simply have to run the following command: `tj create`. There's [a ton of flags available to this command](http://themejuice.it/create#GLOBAL-OPTIONS), but we won't get into them today.
+Now that we've discussed the steps that need automation, let's see how we take advantage of what `tj` has to offer. To get started, we simply have to run the following command:
+
+```
+tj create
+```
+
+There's [a ton of flags available to this command](http://themejuice.it/create#GLOBAL-OPTIONS), but we won't get into them today.
 
 ![Creating your first project](images/create.jpg)
 
@@ -70,12 +76,24 @@ On your first `create`, it'll go ahead and install VVV into the `~/vagrant` dire
 After that's all finished up, `tj` will do its thing and in a few minutes (basically, the time it takes to provision the VM with the new changes), you'll have a brand new development project to work with. Did I mention that you can [automatically access this new project from any device on your network](https://github.com/ezekg/theme-juice-cli#can-i-access-a-project-from-another-device-ie-mobile)?
 
 ## Setting up an existing project
-Working on an existing project? To make life easy, you can run `tj setup` to set up existing projects into the VM. The prompts will pretty much be identical to a `create` (interally, it's actually the same command), with a few prompts ommitted such as asking for a  starter theme. Like `create`, this command also has [a ton of flags available for it](http://themejuice.it/setup#GLOBAL-OPTIONS).
+Working on an existing project? To make life easy, you can run the command below to set up existing projects into the VM:
+
+```
+tj setup
+```
+
+The prompts will pretty much be identical to a `create` (interally, it's actually the same command), with a few prompts ommitted such as asking for a  starter theme. Like `create`, this command also has [a ton of flags available for it](http://themejuice.it/setup#GLOBAL-OPTIONS).
 
 ## Removing a project
 One thing that I wanted to make sure was possible with `tj` is having the freedom to delete a project from the VM, without actually deleting all of my files. Why? Because I don't need 20 projects running inside of my VM, when I'm only actively working on 2-3 of them. This allows you to create, remove, and recreate projects with ease.
 
-Now that I've mentioned how `tj` handles removals, to remove a project from the VM, simply run `tj delete` and follow the prompts. By default, your database is _not_ dropped when removing a project (to allow easier restoration later on), but just in case you want to drop it, you can use the `--drop-db` flag. [Check out the documenation to see the full list of flags.](http://themejuice.it/delete#GLOBAL-OPTIONS)
+Now that I've mentioned how `tj` handles removals, to remove a project from the VM, simply run the command below and follow the prompts:
+
+```
+tj delete
+```
+
+By default, your database is _not_ dropped when removing a project (to allow easier restoration later on), but just in case you want to drop it, you can use the `--drop-db` flag. [Check out the documenation to see the full list of flags.](http://themejuice.it/delete#GLOBAL-OPTIONS)
 
 ## Utilizing a `Juicefile`
 The `Juicefile` is a YAML configuration file that can be used to store commonly-used build scripts and deployment configuration. Each command list can be mapped to an individual project's build tool, allowing a streamlined set of commands to be used across multiple projects that utilize different tools. To better understand this, check out [our starter theme's `Juicefile`](https://github.com/ezekg/theme-juice-starter/blob/master/Juicefile#L1-L37); it contains command mappings for all of our build tools and dependency managers:
@@ -129,7 +147,13 @@ stages:
       - :db
 ```
 
-Once you set up your deployment configuration within your project's `Juicefile` ([check out our configuration for inspiration](https://github.com/ezekg/theme-juice-starter/blob/master/Juicefile#L39-L152)), you simply need to run `tj deploy <stage>`, and you're off! `tj` can also handle database migration with a single command via `tj remote <stage> db:pull` and  `tj remote <stage> db:push`.
+Once you set up your deployment configuration within your project's `Juicefile` ([check out our configuration for inspiration](https://github.com/ezekg/theme-juice-starter/blob/master/Juicefile#L39-L152)), you simply need to run:
+
+```
+tj deploy <stage>
+```
+
+Aaaaannd you're off! `tj` can also handle database migration with a single command via `tj remote <stage> db:pull` and  `tj remote <stage> db:push`.
 
 In pretty much the same way, you can migrate the `uploads/` folder and `.env` file between stages. Want to get started with your first deploy? Head over [here](http://themejuice.it/deploy#SETUP) and follow the quick setup guide to easily get up and running.
 
