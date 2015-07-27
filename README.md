@@ -1,4 +1,4 @@
-# Getting Started With Theme Juice For WordPress Development
+# Getting Started With Theme Juice For Local WordPress Development
 
 Like most WordPress developers, I used MAMP for local development environments. MAMP works well for some people, but it doesn't really allow you to create reproducible development environments. Your environment is really at the will of both MAMP itself (i.e. your settings), as well as which operating system your developing on; and that's really not a good thing.
 
