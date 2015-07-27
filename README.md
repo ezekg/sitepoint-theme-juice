@@ -45,7 +45,7 @@ I would literally do that multiple times a week. Talk about repetitive! The good
 * Build tool and dependency management (more on this later)
 * Multi-stage single-command deployment, including database migration
 
-But, isn't there already a few tools that do most of that work? At the time (i.e. mid last year), there was only [VVV Site Wizard](https://github.com/aliso/vvv-site-wizard), which didn't really satisfy all of the requirements put in place by the above steps, not to mention, we install WordPress inside of a subdirectory, which that script doesn't support in the way we needed.
+But, isn't there already a few tools that do most of that work? At the time (i.e. mid last year), there was only [VVV Site Wizard](https://github.com/aliso/vvv-site-wizard), which didn't really satisfy all of the requirements put in place by the above steps; not to mention, we install WordPress inside of a subdirectory, which that script doesn't support in the way we needed.
 
 One of the things about `tj` that differs itself from projects like VVV Site Wizard and Variable VVV is that `tj` sits on top of proven open source technologies, such as [Capistrano](http://capistranorb.com/) for deployment, and [Composer](https://getcomposer.org/) for [management of plugins and the actual WordPress installation](https://github.com/ezekg/theme-juice-starter/blob/master/composer.json). There's a huge eco-system around [WPackigist](http://wpackagist.org/), so we believe utilizing such great efforts is a no-brainer.
 
