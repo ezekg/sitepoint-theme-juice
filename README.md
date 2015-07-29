@@ -65,11 +65,11 @@ There's [a ton of flags available to this command](http://themejuice.it/create#G
 
 ![Creating your first project](images/create.jpg)
 
-This will lead us through a series of prompts to set up our project, including name and path for the project (remember, the path can be anywhere on your system!), the starter theme you would like to use, the database information, etc. Using all of that information, `tj` will create the necessary files needed to get you up and running as quickly as possible. At the end of all the series of prompts, you will be asked to confirm:
+This will lead us through a series of prompts to set up our project, including name and path for the project (remember, the path can be anywhere on your system!), the starter theme you would like to use, the database information, etc. Using all of that information, `tj` will create the necessary files needed to get you up and running as quickly as possible. At the end of the series of prompts, you will be asked to confirm:
 
 ![Creating your first project](images/confirm.jpg)
 
-On your first `create`, it'll go ahead and install VVV into the `~/vagrant` directory (unless another path is specified via [global flags](http://themejuice.it/#GLOBAL-OPTIONS), or VVV is already installed) and then provision it, which might take a few minutes if you've never done it before.
+On your first `create`, it'll go ahead and install VVV into the `~/vagrant` directory (unless another path is specified via [global flags](http://themejuice.it/#GLOBAL-OPTIONS), or VVV is already installed) and then it'll provision the VM, which might take a few minutes if you've never done it before.
 
 ![Creating your first project](images/success.jpg)
 
